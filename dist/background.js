@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener((function(e,n,t){return"getTabs"===e.type&&chrome.tabs.query({},(function(e){t(e)})),!0}));
