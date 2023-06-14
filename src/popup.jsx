@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { useEffect, useState } from 'react';
-import Table from 'react-bootstrap/Table';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from 'react-bootstrap/Table'; 
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/react-bootstrap/Table';
 
 const Popup = () => {
   const [tabs, setTabs] = useState([]);
@@ -37,7 +38,7 @@ const Popup = () => {
   const tabCount = tabs.length;
 
   return (
-    <div>
+    <div className="custom-popup">
       <div id="page1" style={{ display: activePage === 'page1' ? 'block' : 'none' }}>
         <h1>Page 1</h1>
         <button onClick={() => handlePageChange('page2')}>Go to Page 2</button>
@@ -49,7 +50,7 @@ const Popup = () => {
       <div id="ext_tabs">
         <h2>Tabs</h2>
         <div id="badge">{tabCount}</div>
-        <Table striped bordered>
+        <Table striped bordered className="custom-table">
           <thead>
             <tr>
               <th>Name</th>

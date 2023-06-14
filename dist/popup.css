@@ -6,7 +6,8 @@ body {
 }
 
 #root {
-    width: 400px;
+    width: 500px;
+    
 }
 
 h1,
@@ -93,4 +94,22 @@ a:hover {
 
 tr:last-child {
     border-bottom: none;
+}
+
+.custom-table {
+    width: 100%;
+    table-layout: fixed;
+}
+.custom-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-popup {
+    width: 500px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+
 }
